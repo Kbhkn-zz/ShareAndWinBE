@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -Djavax.net.ssl.trustStore="keystore.jks" -jar target/ShareAndWin.jar --server.port=$PORT $JAR_OPTS

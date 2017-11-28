@@ -1,0 +1,33 @@
+spring:
+  # H2 database conf
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        web-allow-others: false
+
+  # Datasource conf
+  datasource:
+    url: jdbc:h2:mem:shareandwindb
+    username: kbhkn
+    password: 123456
+    driver-class-name: org.h2.Driver
+    initialize: true
+
+  # JPA conf
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.format_sql: true
+  data:
+    rest:
+      base-path: /api
+
+server:
+  port: 8080
+  #For Heroku Port --> port: ${PORT:8080}
+
